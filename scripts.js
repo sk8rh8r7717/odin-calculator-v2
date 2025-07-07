@@ -70,7 +70,9 @@ operatorList.forEach(operatorButton => {
     operatorButton.addEventListener('click', () => {
         if (operator == '') {
             operator = operatorButton.innerText
-            operand1 = displayContent
+            if (displayContent != '') { 
+                operand1 = displayContent
+            }
             displayContent = ''
         }
         else {
